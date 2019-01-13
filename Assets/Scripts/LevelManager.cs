@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance = null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -22,12 +22,9 @@ public class LevelManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        
-        // TO DO: When ball go outside the level, relaod level
-
-        //if (other.GetComponent<Ball>())
-        //{
-        //    GameSystem.instance.ReloadLevel();
-        //}
+        if (other.GetComponent<Ball>())
+        {
+            GameSystem.instance.ReloadLevel();
+        }
     }
 }

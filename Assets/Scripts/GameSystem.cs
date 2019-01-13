@@ -7,7 +7,7 @@ public class GameSystem : MonoBehaviour
 
     private void Awake()
     {
-        if (instance = null)
+        if (instance == null)
         {
             instance = this;
         }
